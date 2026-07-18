@@ -33,12 +33,32 @@ npx playwright test tests/01_Basics/229_Basic_Test.spec.ts
 npx playwright test --ui
 ```
 
+> **Note:** CLI arguments are treated as regex patterns. On Windows, use forward slashes:  
+> `npx playwright test "tests/01_Basics/229_Basic_Test.spec.ts"`
+
+## Test Annotations
+
+Playwright provides annotations to control test execution:
+
+| Annotation     | Description                                               |
+|----------------|-----------------------------------------------------------|
+| `test.skip`    | Always skip this test                                     |
+| `test.only`    | Run only this test (skip all others)                      |
+| `test.fail`    | Mark test as expected to fail                             |
+| `test.fixme`   | Skip with intention to fix later                          |
+| `test.slow`    | Triple the timeout for this test                          |
+
+> **Tip:** Set `forbidOnly: true` in config (already configured for CI) to prevent accidentally committing `test.only`.
+
 ## Project Structure
 
 ```
 ├── tests/                           # Test files organized by topic
-│   ├── 01_Basics/                   # Basic tests (e.g., page title verification)
+│   ├── 01_Basics/                   # Basic tests (page title verification, annotations)
+│   │   ├── 229_Basic_Test.spec.ts   # Basic page title test
+│   │   └── 230_Test_Annotations.spec.ts # Test annotations (skip, only, etc.)
 │   ├── 02_first_tests/              # First test examples
+│   │   └── 231_First_Running_Verify.spec.ts # Running & verifying tests
 │   ├── 03_Locators_Commands/        # Locators and commands
 │   ├── 04_Session_Storage/          # Session storage handling
 │   ├── 05_Allure_Reporting/         # Allure reporting integration
