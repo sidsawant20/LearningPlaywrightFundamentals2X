@@ -58,11 +58,15 @@ Playwright provides annotations to control test execution:
 │   │   ├── 229_Basic_Test.spec.ts   # Basic page title test
 │   │   └── 230_Test_Annotations.spec.ts # Test annotations (skip, only, etc.)
 │   ├── 02_first_tests/              # First test examples
-│   │   └── 231_First_Running_Verify.spec.ts # Running & verifying tests
+│   │   ├── 231_First_Running_Verify.spec.ts # Running & verifying tests
+│   │   └── 231_First_Running_Verify_1.spec.ts # VWO home page logo & title verification
 │   ├── 03_Locators_Commands/        # Locators and commands
+│   │   ├── 238_LS.spec.ts           # Basic page navigation & pause
+│   │   └── 239_Project_VWO_login.spec.ts # VWO login with locators & error message extraction
 │   ├── 04_Session_Storage/          # Session storage handling
 │   ├── 05_Allure_Reporting/         # Allure reporting integration
 │   ├── 06_Multiple_Element_/        # Multiple element handling
+│   │   └── 250_Multi_Element.spec.ts # Collect & log all inner texts from a list group
 │   ├── 07_WebTables/                # Web table interactions
 │   ├── 08_Web_Select_Frames_Iframe/ # Select, frames, iframes
 │   ├── 09_Frame_Iframe/             # Frame and iframe handling

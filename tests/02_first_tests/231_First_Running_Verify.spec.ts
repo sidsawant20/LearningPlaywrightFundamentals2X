@@ -1,12 +1,10 @@
-import {test, expect} from "@playwright/test";
+import {test, expect} from '@playwright/test';
 
-test("Verify our First Test case", async ({page}) => {
-  await page.goto("https://app.vwo.com");
+test ("Verify first test case", async({page}) => {
 
-  await expect(page).toHaveTitle("Login - Wingify");
-  
-  const logo_image = page.locator("#vow-login-logo");
-  await expect(logo_image).toBeVisible();
-
+await page.goto("https://app.thetestingacademy.com/playwright/ttacart/");
+await page.pause();
 
 });
+
+
