@@ -63,7 +63,9 @@ Playwright provides annotations to control test execution:
 │   ├── 03_Locators_Commands/        # Locators and commands
 │   │   ├── 238_LS.spec.ts           # Basic page navigation & pause
 │   │   ├── 239_Project_VWO_login.spec.ts # VWO login with locators & error message extraction
-│   │   └── 241_Project_3_Singup_VWO.spec.ts # VWO signup form validation test
+│   │   ├── 241_Project_3_Singup_VWO.spec.ts # VWO signup form validation test
+│   │   ├── 242_Project_3_Singup_VWO_PW_Locator.spec.ts # VWO signup with Playwright locator strategies
+│   │   └── 243_PW_Command.spec.ts          # page.goto() with waitUntil options (commit, domcontentloaded, load, networkidle)
 │   ├── 04_Session_Storage/          # Session storage handling
 │   ├── 05_Allure_Reporting/         # Allure reporting integration
 │   ├── 06_Multiple_Element_/        # Multiple element handling
